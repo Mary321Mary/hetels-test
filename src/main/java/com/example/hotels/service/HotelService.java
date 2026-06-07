@@ -7,7 +7,7 @@ import com.example.hotels.entity.Address;
 import com.example.hotels.entity.ArrivalTime;
 import com.example.hotels.entity.Contacts;
 import com.example.hotels.entity.Hotel;
-import com.example.hotels.repository.HotelRepository;
+import com.example.hotels.repository.IHotelRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 import org.springframework.http.HttpStatus;
@@ -23,9 +23,9 @@ import java.util.stream.Collectors;
 @Service
 public class HotelService {
 
-    private final HotelRepository hotelRepository;
+    private final IHotelRepository hotelRepository;
 
-    public HotelService(HotelRepository hotelRepository) {
+    public HotelService(IHotelRepository hotelRepository) {
         this.hotelRepository = hotelRepository;
     }
 
